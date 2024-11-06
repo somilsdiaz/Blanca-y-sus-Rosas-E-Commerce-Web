@@ -1,27 +1,68 @@
-<header class="bg-[#fde79e]" >
-    <div class="w-full flex mx-auto h-12 text-[1rem] font-medium">
-        <!-- Primera seccion  -->
-        <section class="flex-1">
-            <ul class="flex ">
-                <li class="ml-36 mt-2 ">Sobre Blanca</li>
-                <li class="ml-10 mt-2">Nosotros</li>
+<header class="bg-[#fde79e] py-3 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-base font-medium">
+        <!-- Primera sección -->
+        <section class="md:ml-20 mb-2 md:mb-0">
+            <ul class="flex flex-wrap space-x-4 justify-center md:justify-start">
+                <li><a href="#sobre-blanca" class="hover:underline">Sobre Blanca</a></li>
+                <li><a href="#nosotros" class="hover:underline">Nosotros</a></li>
             </ul>
         </section>
-        
+
         <!-- Segunda sección -->
-        <section class="flex-1" >
-            <ul class="flex">
-                <li class="pr-6 mx-auto mt-2">Servicios</li>
-                <li class="pr-6 mx-auto mt-2">Características</li>
-                <li class="mx-auto mt-2">Productos</li>
+        <section class="mb-2 md:mb-0">
+            <ul class="flex flex-wrap space-x-4 justify-center">
+                <li><a href="#servicios" class="hover:underline">Servicios</a></li>
+                <li><a href="#caracteristicas" class="hover:underline">Características</a></li>
+                <li><a href="#productos" class="hover:underline">Productos</a></li>
             </ul>
         </section>
-        
+
         <!-- Tercera sección -->
-        <section class="flex-1">
-            <ul class="flex ml-56">
-                <li class="mt-2">Recursos</li>
+        <section class="md:mr-28">
+            <ul class="flex space-x-4 justify-center md:justify-end">
+                <li><a href="#recursos" class="hover:underline">Recursos</a></li>
             </ul>
         </section>
+    </div>
+
+    <div class="md:ml-28 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-6">
+        <!-- Logotipo -->
+        <div class="text-center md:text-left mb-4 md:mb-0">
+            <h1 class="text-3xl font-bold">Blanca</h1>
+            <h2 class="text-xl font-semibold italic">y sus rosas</h2>
+        </div>
+
+        <div class="md:mx-4 w-full md:w-[500px] mx-auto">
+            <form action="/search" method="GET" role="search" aria-label="Formulario de búsqueda" class="relative flex items-center">
+                <input 
+                    type="text" 
+                    name="q" 
+                    id="search-input" 
+                    placeholder="Buscar productos..." 
+                    aria-label="Buscar productos" 
+                    class="w-full h-12 pl-4 pr-12 rounded-full border-2 border-[#D1C7A4] focus:outline-none focus:border-[#b0a07f]"
+                />
+                <!-- Botón de lupa a la derecha -->
+                <button type="submit" aria-label="Buscar productos" class="absolute right-4 text-gray-500 hover:text-gray-700">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        
+        
+
+
+        <!-- Iconos de navegación -->
+        <div class="md:mr-24 flex space-x-6 mt-4 md:mt-0">
+            <a href="/tienda" aria-label="Ver productos disponibles" class="hover:scale-110 transition-transform">
+                <img src="store.png" alt="Tienda" class="h-8 w-8" loading="lazy">
+            </a>
+            <a href="/Carrito" aria-label="Conoce nuestra tienda" class="hover:scale-110 transition-transform">
+                <img src="cart.png" alt="Carrito" class="h-8 w-8" loading="lazy">
+            </a>
+            <a href="/contacto" aria-label="Contacto y soporte" class="hover:scale-110 transition-transform">
+                <img src="contact.png" alt="Contacto" class="h-8 w-8" loading="lazy">
+            </a>
+        </div>
     </div>
 </header>
