@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+
+:host {
+  display: block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: linear-gradient(135deg, #fef7e5, #ffebb3);
+  transition: background 0.8s ease-in-out, box-shadow 0.5s ease;
+  will-change: background, box-shadow;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #ffe4a1, #ffc078);
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+    z-index: -1;
+  }
+
+  &.scrolled {
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  // Estilos para pantallas medianas y grandes
+  @media (min-width: 768px) {
+    background: linear-gradient(135deg, #ffe4a1, #ffc078);
+
+    &::before {
+      content: '';
+      background: linear-gradient(135deg, #fef7e5, #ffebb3);
+    }
+
+    &.scrolled {
+      transition: opacity 0.8s ease-in-out;
+      z-index: -1;
+      background: linear-gradient(135deg, #ffe4a1, #ffc078);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.top-bar {
+  display: none;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Inter';
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    a {
+      color: #b91c1c;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #f43f5e;
+      }
+    }
+  }
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+
+.logo {
+  a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 {
+    font-family: serif;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #9f1239;
+    margin: 0;
+  }
+
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #e11d48;
+    font-style: italic;
+    margin: 0;
+
+    span {
+      color: #f43f5e;
+    }
+  }
+}
+
+.search-bar {
+  display: block; 
+  width: 100%; 
+  max-width: none; 
+  margin: 0 1rem 0 1rem; 
+
+  @media (min-width: 768px) {
+    max-width: 36rem; /* Mantén el límite en pantallas más grandes */
+    margin: 0 2rem; /* Espaciado en desktop */
+
+  }
+
+  form {
+    position: relative;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem 1rem 0.5rem 2.5rem;
+    border-radius: 9999px;
+    border: 2px solid #fecdd3;
+    font-size: 0.875rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: #f43f5e;
+      box-shadow: 0 0 0 3px rgba(244, 63, 94, 0.1);
+    }
+  }
+
+  button {
+    position: absolute;
+    left: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #f43f5e;
+    cursor: pointer;
+  }
+}
+
+
+.nav-icons {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+
+  @media (min-width: 768px) {
+    display: flex;
+  }
+
+  a {
+    color: #9f1239;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #f43f5e;
+    }
+  }
+
+  .contact-button {
+    background-color: #e11d48;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size:15px;
+
+    &:hover {
+      background-color: #be123c;
+    }
+  }
+}
+.mobile-menu-button {
+  display: block;
+  background: none;
+  border: none;
+  color: #9f1239;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+  &:active {
+    transform: rotate(90deg); /* Rotación al hacer clic */
+  }
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
