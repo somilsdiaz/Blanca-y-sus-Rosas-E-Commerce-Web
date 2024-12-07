@@ -1,36 +1,40 @@
-<header class="bg-[#fde79e] py-3 px-4">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-base font-medium">
+<header class="bg-[#fff5d8] py-3 px-4">
+
+        
+
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center font-medium text-sm">
         <!-- Primera sección -->
-        <section class="md:ml-20 mb-2 md:mb-0">
+        <section class="hidden md:flex md:-ml-[5.5rem] f mb-2 md:mb-0">
             <ul class="flex flex-wrap space-x-4 justify-center md:justify-start">
-                <li><a href="#sobre-blanca" class="hover:underline">Sobre Blanca</a></li>
-                <li><a href="#nosotros" class="hover:underline">Nosotros</a></li>
+                <li><a href="#sobre-blanca" class="hover:text-gray-600">Sobre Blanca</a></li>
+                <li><a href="#nosotros" class="hover:text-gray-600">Nosotros</a></li>
             </ul>
         </section>
 
         <!-- Segunda sección -->
-        <section class="mb-2 md:mb-0">
-            <ul class="flex flex-wrap space-x-4 justify-center">
-                <li><a href="#servicios" class="hover:underline">Servicios</a></li>
-                <li><a href="#caracteristicas" class="hover:underline">Características</a></li>
-                <li><a href="#productos" class="hover:underline">Productos</a></li>
+        <section class="hidden md:flex mb-2 md:mb-0">
+            <ul class="flex flex-wrap space-x-6 justify-center">
+                <li><a href="#servicios" class="hover:text-gray-600">Servicios</a></li>
+                <li><a href="#caracteristicas" class="hover:text-gray-600">Características</a></li>
+                <li><a href="#productos" class="hover:text-gray-600">Productos</a></li>
             </ul>
         </section>
 
         <!-- Tercera sección -->
-        <section class="md:mr-28">
+        <section class="hidden md:flex md:-mr-11">
             <ul class="flex space-x-4 justify-center md:justify-end">
-                <li><a href="#recursos" class="hover:underline">Recursos</a></li>
+                <li><a href="#recursos" class="hover:text-gray-600">Recursos</a></li>
             </ul>
         </section>
     </div>
 
-    <div class="md:ml-28 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-6">
+    <div class="md:ml-3 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-3 pr-4 pl-4 md:py-6 md:pr-0 md:pl-0">
         <!-- Logotipo -->
-        <div class="text-center md:text-left mb-4 md:mb-0">
+        <div class="text-right w-full pr-3 md:pr-0 md:text-left md:w-auto mb-4 md:mb-0">
             <h1 class="text-3xl font-bold">Blanca</h1>
             <h2 class="text-xl font-semibold italic">y sus rosas</h2>
         </div>
+        
 
         <div class="md:mx-4 w-full md:w-[500px] mx-auto">
             <form action="/search" method="GET" role="search" aria-label="Formulario de búsqueda" class="relative flex items-center">
@@ -40,7 +44,7 @@
                     id="search-input" 
                     placeholder="Buscar productos..." 
                     aria-label="Buscar productos" 
-                    class="w-full h-12 pl-4 pr-12 rounded-full border-2 border-[#D1C7A4] focus:outline-none focus:border-[#b0a07f]"
+                    class="w-full h-14 md:h-12 pl-4 pr-12 rounded-full border-2 border-[#fff] focus:outline-none focus:border-[#b0a07f]"
                 />
                 <!-- Botón de lupa a la derecha -->
                 <button type="submit" aria-label="Buscar productos" class="absolute right-4 text-gray-500 hover:text-gray-700">
@@ -53,7 +57,7 @@
 
 
         <!-- Iconos de navegación -->
-        <div class="md:mr-24 flex space-x-6 mt-4 md:mt-0">
+        <div class="hidden md:flex md:-mr-44 space-x-6 mt-4 md:mt-0">
             <a href="/tienda" aria-label="Ver productos disponibles" class="hover:scale-110 transition-transform">
                 <img src="store.png" alt="Tienda" class="h-8 w-8" loading="lazy">
             </a>
