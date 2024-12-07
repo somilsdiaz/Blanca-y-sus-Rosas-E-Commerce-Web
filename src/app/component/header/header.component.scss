@@ -9,8 +9,8 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
-  background: linear-gradient(135deg, #fef7e5, #ffebb3);
+  z-index: 100; /* Asegúrate de que el header esté por encima de otros elementos */
+  background: linear-gradient(135deg, #fdf6e3, #ffb3c1);
   transition: background 0.8s ease-in-out, box-shadow 0.5s ease;
   will-change: background, box-shadow;
 
@@ -24,27 +24,26 @@ header {
     background: linear-gradient(135deg, #ffe4a1, #ffc078);
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
-    z-index: -1;
+    z-index: -1; /* Evita que el pseudo-elemento cubra el contenido principal */
   }
 
   &.scrolled {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Añade un efecto visual al desplazarte */
     &::before {
       opacity: 1;
     }
   }
 
-  // Estilos para pantallas medianas y grandes
+  /* Estilos para pantallas medianas y grandes */
   @media (min-width: 768px) {
     background: linear-gradient(135deg, #ffe4a1, #ffc078);
 
     &::before {
       content: '';
-      background: linear-gradient(135deg, #fef7e5, #ffebb3);
+      background: linear-gradient(135deg, #fdf6e3, #ffb3c1);
     }
 
     &.scrolled {
-      transition: opacity 0.8s ease-in-out;
-      z-index: -1;
       background: linear-gradient(135deg, #ffe4a1, #ffc078);
 
       &::before {
@@ -53,7 +52,6 @@ header {
     }
   }
 }
-
 
 .container {
   max-width: 1280px;
