@@ -1,8 +1,11 @@
-<header class="bg-[#fff5d8] py-3 px-4">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center font-medium text-sm">
+<header   [class]="
+'fixed top-0 left-0 right-0 z-50 transition-all duration-300 ' +
+(isScrolled ? ' bg-[#fff5d6] shadow-md' : 'bg-[#fbe79e] ')
+" >
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center font-medium text-sm pt-2">
             <!-- Primera sección -->
-            <section class="hidden md:flex md:-ml-[5.5rem] f mb-2 md:mb-0">
-                <ul class="flex flex-wrap space-x-4 justify-center md:justify-start">
+            <section class="hidden md:flex f mb-2 md:mb-0">
+                <ul class="flex flex-wrap space-x-4 justify-center md:justify-start -ml-4">
                     <li><a href="#sobre-blanca" class="hover:text-gray-600">Sobre Blanca</a></li>
                     <li><a href="#nosotros" class="hover:text-gray-600">Nosotros</a></li>
                 </ul>
@@ -18,8 +21,8 @@
             </section>
 
             <!-- Tercera sección -->
-            <section class="hidden md:flex md:-mr-11">
-                <ul class="flex space-x-4 justify-center md:justify-end">
+            <section class="hidden md:flex">
+                <ul class="flex space-x-4 justify-center md:justify-end mr-7">
                     <li><a href="#recursos" class="hover:text-gray-600">Recursos</a></li>
                 </ul>
             </section>
@@ -37,9 +40,9 @@
             
             
             <!-- Logotipo -->
-            <div>
-            <h1 class="text-3xl font-bold">Blanca</h1>
-            <h2 class="md:text-xl font-semibold italic text-xs ml-4 md:mr-0 md:ml-0">y sus rosas</h2>
+            <div class="pl-4">
+                <h1 class="text-3xl font-bold ">Blanca</h1>
+                <h2 class="md:text-xl font-semibold italic text-xs ml-4 md:mr-0 md:ml-0 ">y sus rosas</h2>
             </div>
         </div>
   
@@ -66,7 +69,7 @@
 
 
         <!-- Iconos de navegación -->
-        <div class="hidden md:flex md:-mr-44 space-x-6 mt-4 md:mt-0">
+        <div class="hidden md:flex space-x-6 mt-4 md:mt-0 -mr-5">
             <a href="/tienda" aria-label="Ver productos disponibles" class="hover:scale-110 transition-transform">
                 <img src="store.png" alt="Tienda" class="h-8 w-8" loading="lazy">
             </a>
