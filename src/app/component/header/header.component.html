@@ -1,81 +1,59 @@
-<header class="bg-[#fff5d8] py-3 px-4">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center font-medium text-sm">
-            <!-- Primera sección -->
-            <section class="hidden md:flex md:-ml-[5.5rem] f mb-2 md:mb-0">
-                <ul class="flex flex-wrap space-x-4 justify-center md:justify-start">
-                    <li><a href="#sobre-blanca" class="hover:text-gray-600">Sobre Blanca</a></li>
-                    <li><a href="#nosotros" class="hover:text-gray-600">Nosotros</a></li>
-                </ul>
-            </section>
-
-            <!-- Segunda sección -->
-            <section class="hidden md:flex mb-2 md:mb-0">
-                <ul class="flex flex-wrap space-x-6 justify-center">
-                    <li><a href="#servicios" class="hover:text-gray-600">Servicios</a></li>
-                    <li><a href="#caracteristicas" class="hover:text-gray-600">Características</a></li>
-                    <li><a href="#productos" class="hover:text-gray-600">Productos</a></li>
-                </ul>
-            </section>
-
-            <!-- Tercera sección -->
-            <section class="hidden md:flex md:-mr-11">
-                <ul class="flex space-x-4 justify-center md:justify-end">
-                    <li><a href="#recursos" class="hover:text-gray-600">Recursos</a></li>
-                </ul>
-            </section>
-    </div>
-
-    <div class="md:ml-3 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center py-3 pr-4 pl-4 md:py-6 md:pr-0 md:pl-0">
-
-        <div class="flex items-center justify-between w-full pr-3 md:pr-0 md:text-left md:w-auto mb-4 md:mb-0">
-            <!-- Botón del menú -->
-            <button class="menu-icon md:hidden flex items-center mr-3">
-                <svg class="h-9 w-9 text-gray-700" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 6h18M3 12h18M3 18h18" />
-                </svg>
-            </button>
-            
-            
-            <!-- Logotipo -->
-            <div>
-            <h1 class="text-3xl font-bold">Blanca</h1>
-            <h2 class="md:text-xl font-semibold italic text-xs ml-4 md:mr-0 md:ml-0">y sus rosas</h2>
-            </div>
+<header [class]="{'scrolled': isScrolled} " class="shadow-lg">
+    
+    <div class="container">
+      <!-- Top bar -->
+      <div class="top-bar">
+        <nav>
+          <ul>
+            <li><a href="#sobre-blanca">Sobre Blanca</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li><a href="#caracteristicas">Características</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#recursos">Recursos</a></li>
+          </ul>
+        </nav>
+      </div>
+  
+      <!-- Main header -->
+      <div class="main-header">
+        <!-- Logo -->
+        <div class="logo">
+          <a href="/">
+            <h1>Blanca</h1>
+            <h2>y sus <span>rosas</span></h2>
+          </a>
         </div>
   
-        
-
-        <div class="md:mx-4 w-full md:w-[500px] mx-auto">
-            <form action="/search" method="GET" role="search" aria-label="Formulario de búsqueda" class="relative flex items-center">
-                <input 
-                    type="text" 
-                    name="q" 
-                    id="search-input" 
-                    placeholder="Buscar productos..." 
-                    aria-label="Buscar productos" 
-                    class="w-full h-14 md:h-12 pl-4 pr-12 rounded-full border-2 border-[#fff] focus:outline-none focus:border-[#b0a07f]"
-                />
-                <!-- Botón de lupa a la derecha -->
-                <button type="submit" aria-label="Buscar productos" class="absolute right-4 text-gray-500 hover:text-gray-700">
-                    <i class="fa fa-search"></i>
-                </button>
-            </form>
+        <!-- Search bar -->
+        <div class="search-bar">
+          <form>
+            <input type="search" placeholder="Buscar productos...">
+            <button type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+            </button>
+          </form>
         </div>
-        
-        
-
-
-        <!-- Iconos de navegación -->
-        <div class="hidden md:flex md:-mr-44 space-x-6 mt-4 md:mt-0">
-            <a href="/tienda" aria-label="Ver productos disponibles" class="hover:scale-110 transition-transform">
-                <img src="store.png" alt="Tienda" class="h-8 w-8" loading="lazy">
-            </a>
-            <a href="/Carrito" aria-label="Conoce nuestra tienda" class="hover:scale-110 transition-transform">
-                <img src="cart.png" alt="Carrito" class="h-8 w-8" loading="lazy">
-            </a>
-            <a href="/contacto" aria-label="Contacto y soporte" class="hover:scale-110 transition-transform">
-                <img src="contact.png" alt="Contacto" class="h-8 w-8" loading="lazy">
-            </a>
-        </div>
+  
+        <!-- Navigation icons -->
+        <nav class="nav-icons">
+          <a href="/tienda" aria-label="Ver productos disponibles">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+          </a>
+          <a href="/carrito" aria-label="Carrito de compras">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+          </a>
+          <button class="contact-button">Contacto</button>
+        </nav>
+  
+        <!-- Mobile menu button -->
+        <button class="mobile-menu-button" aria-label="Menu">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        </button>
+      </div>
     </div>
-</header>
+  </header>

@@ -1,0 +1,32 @@
+<div class="flex justify-center">
+    <div class="w-full max-w-sm bg-white rounded-lg shadow-md p-4 transition-transform relative overflow-hidden">
+      <div class="relative">
+        <img
+          [src]="imageSrc"
+          [alt]="productName"
+          class="object-contain w-full h-48 rounded-lg mb-4"
+        />
+        <span class="absolute top-2 right-2 bg-gray-900 text-white px-3 py-1 rounded-full text-xs">
+          {{ badgeText }}
+        </span>
+        <!-- New animated discount tag -->
+        <div *ngIf="porcent" class="absolute top-0 left-0 bg-red-500 text-white px-3 py-1 rounded-br-lg transform -rotate-12 shadow-lg animate-pulse">
+          <span class="text-lg font-bold">{{ porcent }}</span>
+          <span class="text-xs"> descuento</span>
+        </div>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ productName }}</h3>
+      <p *ngIf="oldPrice" class="text-sm text-gray-600 line-through">{{ oldPrice }}</p>
+      <p class="text-xl font-bold text-red-600">{{ newPrice }}</p>
+      <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mt-4">
+        <button class="w-full sm:w-auto bg-gradient-to-r from-red-500 to-red-700 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-md hover:from-red-600 hover:to-red-800 transition-all focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2">
+          Añadir al carrito
+        </button>
+        <button class="w-full sm:w-auto bg-gradient-to-r from-gray-800 to-gray-900 text-white px-4 py-2 rounded-lg text-sm font-semibold shadow-md hover:from-gray-700 hover:to-black transition-all focus:outline-none focus:ring-2 focus:ring-gray-600 focus:ring-offset-2">
+          Comprar ahora
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  
