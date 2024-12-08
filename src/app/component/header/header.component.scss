@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Lora:wght@400;700&display=swap');
 
 :host {
   display: block;
@@ -10,7 +11,7 @@ header {
   left: 0;
   right: 0;
   z-index: 100; /* Asegúrate de que el header esté por encima de otros elementos */
-  background: linear-gradient(135deg, #fdf6e3, #ffb3c1);
+  background: linear-gradient(135deg, #ffe4a1, #ffc078);
   transition: background 0.8s ease-in-out, box-shadow 0.5s ease;
   will-change: background, box-shadow;
 
@@ -21,7 +22,8 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #ffe4a1, #ffc078);
+    background: linear-gradient(135deg, #fdf6e3, #ffb3c1);
+
     opacity: 0;
     transition: opacity 0.8s ease-in-out;
     z-index: -1; /* Evita que el pseudo-elemento cubra el contenido principal */
@@ -106,26 +108,31 @@ header {
   }
 
   h1 {
-    font-family: serif;
+    font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    font-weight: 900;
-    color: #9f1239;
+    font-weight: 700;
+    color: #9f1239; /* Deep red for elegance */
     margin: 0;
+    letter-spacing: -1px;
   }
 
   h2 {
     font-family: 'Roboto', sans-serif;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 500;
-    color: #e11d48;
+    color: #e11d48; /* Lighter red for contrast */
     font-style: italic;
     margin: 0;
+    text-transform: lowercase;
+    margin-top: -12px;
 
     span {
-      color: #f43f5e;
+      color: #f43f5e; /* Bright rose for emphasis */
+      font-weight: 600;
     }
   }
 }
+
 
 .search-bar {
   display: block; 
