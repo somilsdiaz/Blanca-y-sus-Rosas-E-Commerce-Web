@@ -14,4 +14,5 @@ export class ProductCardComponent {
   @Input() productName: string = '';
   @Input() oldPrice: string = '';
   @Input() newPrice: string = '';
+  @Input() porcent: string = '';
 }

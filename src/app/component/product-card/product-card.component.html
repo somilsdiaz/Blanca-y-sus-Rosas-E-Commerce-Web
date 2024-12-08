@@ -1,5 +1,5 @@
 <div class="flex justify-center">
-    <div class="w-full max-w-sm bg-white rounded-lg shadow-md p-4 transition-transform ">
+    <div class="w-full max-w-sm bg-white rounded-lg shadow-md p-4 transition-transform relative overflow-hidden">
       <div class="relative">
         <img
           [src]="imageSrc"
@@ -9,6 +9,11 @@
         <span class="absolute top-2 right-2 bg-gray-900 text-white px-3 py-1 rounded-full text-xs">
           {{ badgeText }}
         </span>
+        <!-- New animated discount tag -->
+        <div *ngIf="porcent" class="absolute top-0 left-0 bg-red-500 text-white px-3 py-1 rounded-br-lg transform -rotate-12 shadow-lg animate-pulse">
+          <span class="text-lg font-bold">{{ porcent }}</span>
+          <span class="text-xs">OFF</span>
+        </div>
       </div>
       <h3 class="text-lg font-semibold text-gray-900 mb-2">{{ productName }}</h3>
       <p *ngIf="oldPrice" class="text-sm text-gray-600 line-through">{{ oldPrice }}</p>
@@ -23,4 +28,5 @@
       </div>
     </div>
   </div>
+  
   
