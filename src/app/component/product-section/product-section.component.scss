@@ -57,8 +57,8 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-columns: 1fr;
     gap: 1.5em;
-    margin: 2em 0;
     width: 100%;
+    margin: -3.5em 0;
     padding: 0 1em;
 
     .oneProduct {
@@ -133,6 +133,8 @@ $shadow-color: rgba(0, 0, 0, 0.1);
         grid-template-columns: repeat(3, 1fr);
         gap: 2em;
         width: 60%;
+        margin: 2em 0;
+
 
         .oneProduct {
             height: 300px;
@@ -152,6 +154,8 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 
     .productsSection {
         width: 65%;
+        margin: 2em 0;
+
     }
 }
 
