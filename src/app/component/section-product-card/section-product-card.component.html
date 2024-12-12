@@ -1,0 +1,40 @@
+<article
+  class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 ease-in-out transform hover:shadow-2xl">
+  <div class="relative">
+    <img [src]="productImage" alt="{{ productName }}" class="w-full h-40 object-cover" />
+    <div *ngIf="productDiscountPercentage"
+      class="absolute top-0 left-0 bg-red-600 text-white px-3 py-1 rounded-br-lg font-semibold">
+      {{ productDiscountPercentage }} OFF
+    </div>
+    <button
+      class="absolute top-2 right-2 bg-[#e97f27] text-white p-2 rounded-full shadow-lg hover:bg-[#ba661f] transition-colors duration-300 ease-in-out">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+    </button>
+  </div>
+  <div class="p-4 space-y-3">
+    <h3 class="text-lg font-bold text-gray-900 truncate w-full">{{ productName }}</h3>
+    <p class="text-sm text-gray-700">{{ productDescription }}</p>
+    <div class="flex justify-between items-center">
+      <div class="space-y-1">
+        <span *ngIf="productPrice" class="text-sm text-gray-500 line-through block">{{ productPrice }}</span>
+        <span *ngIf="productDiscountPrice" class="text-2xl font-bold text-[#0071e3]">{{ productDiscountPrice }}</span>
+      </div>
+      <span *ngIf="badgeText" class="text-xs font-medium flex items-center mt-5 ml-8 text-center" [ngClass]="badgeColor">
+        <span [innerHTML]="sanitizedBadgeIcon"></span>
+        {{ badgeText }}
+      </span>
+    </div>
+    <button
+      class="w-full bg-[#0071e3] text-white py-2 rounded-lg hover:bg-[#0056b3] transition-colors duration-300 ease-in-out flex items-center justify-center font-medium text-sm">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
+        stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+      </svg>
+      Comprar ahora
+    </button>
+  </div>
+</article>

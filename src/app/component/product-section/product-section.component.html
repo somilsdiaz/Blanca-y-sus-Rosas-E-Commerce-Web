@@ -1,0 +1,151 @@
+<section class="background">
+    <div class="cards">
+        <article class="bg-[#5ea9ae] p-8 rounded-lg shadow-2xl transform transition duration-500 hover:scale-105 hover:shadow-xl mb-8">
+            <h2 class="subtitle text-4xl font-extrabold text-white mb-6 animate-fadeInUp">
+                🌹 Blanca y sus Rosas: Donde tus Necesidades se Convierten en Oportunidades
+            </h2>
+            <p class="textCard text-lg text-white leading-relaxed mb-6">
+                <span class="font-bold">Descubre increíbles ofertas</span>, promociones exclusivas y envío rápido. Desde el hogar hasta el entretenimiento, aquí encontrarás todo lo que necesitas. ¡Haz tu compra fácil y disfruta de una <span class="text-yellow-300 font-bold">experiencia de cliente excepcional</span>! 🌟
+            </p>
+            <button class="cta-button bg-white text-[#5ea9ae] font-bold py-2 px-4 rounded-full shadow-lg transform transition duration-500 hover:bg-yellow-300 hover:text-white hover:scale-110 flex items-center animate-bounce">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="cart-icon mr-2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                Ir al carrito
+            </button>
+        </article>
+        <article class="bg-[#5ea9ae] p-8 rounded-lg shadow-2xl transform transition duration-500 hover:scale-105 hover:shadow-xl">
+            <h2 class="subtitle text-4xl font-extrabold text-white mb-6 animate-fadeInUp">
+                ¡Todo lo que Necesitas, en un Solo Lugar!
+            </h2>
+            <img class="imageCard w-full h-auto rounded-lg mb-6 transition duration-500 hover:opacity-90 hover:rotate-3" src="promo.png" alt="Productos destacados" />
+            <p class="textCard text-lg text-white leading-relaxed">
+                <span class="font-bold">Descubre una amplia selección de productos</span> diseñados para sorprenderte, con <span class="text-yellow-300 font-bold">descuentos irresistibles</span> y calidad garantizada. Compra desde la comodidad de tu hogar y disfruta de nuestra <span class="text-pink-300 font-bold">atención personalizada</span> y envíos rápidos. ¡Haz de cada compra una experiencia inolvidable! 🌹
+            </p>
+        </article>
+    </div>
+    <section class="productsSection">
+        <app-section-product-card
+            [productName]="'Mochila infantil + lon...'"
+            [productDescription]="'Mochila con 3 espaciosos compartimientos.'"
+            [productImage]="'products/003.webp'"
+            [productPrice]="'$54.999'"
+            [productDiscountPrice]="'$44.999'"
+            [productDiscountPercentage]="'9%'"
+            [badgeText]="'Pocas unidades'"
+            [badgeColor]="'text-red-600'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1 text-right&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M13 16h-1v-4H9l4-4m0 8h1v4h3l-4 4&quot; /></svg>'">
+        </app-section-product-card>
+
+        <!-- Product 2 -->
+        <app-section-product-card
+            [productName]="'Plancha Rizadora'"
+            [productDescription]="'Consigue rizos definidos y ondas naturales'"
+            [productImage]="'products/004.webp'"
+            [productPrice]="'$69.999'"
+            [productDiscountPrice]="'$49.999'"
+            [productDiscountPercentage]="'28%'"
+            [badgeText]="'Producto nuevo'"
+            [badgeColor]="'text-green-600'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M12 4v16m8-8H4&quot; /></svg>'">
+        </app-section-product-card>
+
+        <!-- Product 3 -->
+        <app-section-product-card
+            [productName]="'Hula Hula'"
+            [productDescription]="'¡Mantén a los niños activos y entretenidos con este Ula Ula!'"
+            [productImage]="'products/005.webp'"
+            [productPrice]="'$14.999'"
+            [productDiscountPrice]="'$9.999'"
+            [productDiscountPercentage]="'33%'"
+            [badgeText]="'Envío gratis'"
+            [badgeColor]="'text-teal-600'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1 mt-1&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M3 16h13M5 8h16M4 4h17v12H4zm0 0a2 2 0 00-2 2v8a2 2 0 002 2h17&quot; /></svg>'">
+        </app-section-product-card>
+      
+         <!-- Product 4 -->
+        <app-section-product-card
+            [productName]="'Hervidor De Agua'"
+            [productDescription]="'Tetera Acero Inoxidable 1.8 Electrónica'"
+            [productImage]="'products/006.webp'"
+            [productPrice]="'$50.999'"
+            [productDiscountPrice]="'$43.999'"
+            [productDiscountPercentage]="'14%'"
+            [badgeText]="'Edicion limitada'"
+            [badgeColor]="'text-yellow-500'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1 mt-1&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M11.049 2.927c.3-.921 1.603-.921 1.902 0l2.276 7.02a1 1 0 00.95.69h7.392c.969 0 1.371 1.24.588 1.81l-6.076 4.415a1 1 0 00-.364 1.118l2.276 7.021c.3.921-.755 1.688-1.538 1.118l-6.077-4.415a1 1 0 00-1.176 0l-6.077 4.415c-.783.57-1.838-.197-1.538-1.118l2.276-7.021a1 1 0 00-.364-1.118L2.64 12.447c-.783-.57-.381-1.81.588-1.81h7.392a1 1 0 00.95-.69l2.276-7.02z&quot; /></svg>'"
+            >
+        </app-section-product-card>
+
+        <!-- Product 5 -->
+        <app-section-product-card
+            [productName]="'Olla de presión'"
+            [productDescription]="'Elaborado con una aleacion de aluminio y baquelita [4.2 lts]'"
+            [productImage]="'products/008.webp'"
+            [productPrice]="'$119.999'"
+            [productDiscountPrice]="'$79.999'"
+            [productDiscountPercentage]="'33%'"
+            [badgeText]="'Envío gratis'"
+            [badgeColor]="'text-teal-600'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1 mt-1&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M3 16h13M5 8h16M4 4h17v12H4zm0 0a2 2 0 00-2 2v8a2 2 0 002 2h17&quot; /></svg>'">
+        </app-section-product-card>
+
+        <!-- Product 6 -->
+        <app-section-product-card
+        [productName]="'Exhibidor Vitrina'"
+            [productDescription]="'Para ventas de empanada Vidrio Plano 0.5 Metro'"
+            [productImage]="'products/007.webp'"
+            [productPrice]="'$229.999'"
+            [productDiscountPrice]="'$119.999'"
+            [productDiscountPercentage]="'50%'"
+            [badgeText]="'Oferta especial'"
+            [badgeColor]="'text-red-600'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1 mt-1&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M17 9l-5 5m2-5l-2-2m2 2l-2 2m1.5-2.5A2.5 2.5 0 1013 9.5a2.5 2.5 0 002.5-2.5M6 12v3a3 3 0 003 3h8a3 3 0 003-3v-3m-4 3a3 3 0 00-6 0&quot; /></svg>'"
+            >
+        </app-section-product-card>
+
+        <!-- Product 7 -->
+        <app-section-product-card
+            [productName]="'Aspiradora Portatil'"
+            [productDescription]="'Portatil y con mango ajustable con potente succión'"
+            [productImage]="'products/009.webp'"
+            [productPrice]="'$46.999'"
+            [productDiscountPrice]="'$39.999'"
+            [productDiscountPercentage]="'15%'"
+            [badgeText]="'Producto popular'"
+            [badgeColor]="'text-pink-500'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1 mt-1&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M12 2c2.8 0 5 2.239 5 5 0 2.88-3.65 5.632-3.9 9.15C13.062 18.627 14 20 14 20h-4s.938-1.373.9-3.85C10.65 12.632 7 9.88 7 7c0-2.761 2.2-5 5-5z&quot; /></svg>'"
+            >
+        </app-section-product-card>
+
+        <!-- Product 8 -->
+        <app-section-product-card
+            [productName]="'Vajilla de 12 Piezas'"
+            [productDescription]="'4 platos, 4 soperas y 4 Mugs [Color estampado multicuolor]'"
+            [productImage]="'products/012.webp'"
+            [productPrice]="'$72.999'"
+            [productDiscountPrice]="'$49.999'"
+            [productDiscountPercentage]="'32%'"
+            [badgeText]="'Oferta especial'"
+            [badgeColor]="'text-red-600'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1 mt-1&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M17 9l-5 5m2-5l-2-2m2 2l-2 2m1.5-2.5A2.5 2.5 0 1013 9.5a2.5 2.5 0 002.5-2.5M6 12v3a3 3 0 003 3h8a3 3 0 003-3v-3m-4 3a3 3 0 00-6 0&quot; /></svg>'"
+            >
+        </app-section-product-card>
+
+        <!-- Product 9 -->
+        <app-section-product-card
+            [productName]="'SETS de Recipientes'"
+            [productDescription]="'Incluye 5 unidades con sus respectivas tapas'"
+            [productImage]="'products/013.webp'"
+            [productPrice]="'$20.999'"
+            [productDiscountPrice]="'$14.999'"
+            [productDiscountPercentage]="'28%'"
+            [badgeText]="'Producto nuevo'"
+            [badgeColor]="'text-green-600'"
+            [badgeIcon]="'<svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;h-4 w-4 mr-1 mt-1&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;><path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M5 7l4-4m0 0l4 4m-4-4v18m2-2H7a2 2 0 01-2-2V9a2 2 0 012-2h10a2 2 0 012 2v7&quot; /></svg>'"
+            >
+        </app-section-product-card>
+    </section>
+</section>
