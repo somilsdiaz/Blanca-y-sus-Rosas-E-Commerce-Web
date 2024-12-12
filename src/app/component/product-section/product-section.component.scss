@@ -31,13 +31,13 @@ $shadow-color: rgba(0, 0, 0, 0.1);
 }
 
 .background {
-    background-color: $background-color;
     width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 2em;
     padding: 2em 1em;
+    margin-top: -55px;
 }
 
 // Cards Section
