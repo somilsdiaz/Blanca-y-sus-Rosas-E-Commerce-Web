@@ -1,0 +1,27 @@
+.aspect-w-4 {
+    position: relative;
+    width: 100%;
+    padding-top: calc(3 / 4 * 100%); 
+    }
+    
+    .aspect-h-3 {
+        height: auto;
+    }
+    
+    .aspect-w-4 > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: inherit;
+    }
+    
+    .relative {
+        position: relative;
+    }
+    
+    .object-cover {
+        object-fit: cover; /* Escala y recorta la imagen */
+    }
