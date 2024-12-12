@@ -1,7 +1,7 @@
 <article
   class="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 ease-in-out transform hover:shadow-2xl">
-  <div class="relative">
-    <img [src]="productImage" alt="{{ productName }}" class="w-full h-40 object-cover" />
+  <div class="relative aspect-w-4 aspect-h-3">
+    <img [src]="productImage" alt="{{ productName }}" class="w-full h-full object-cover rounded-t-xl" />
     <div *ngIf="productDiscountPercentage"
       class="absolute top-0 left-0 bg-red-600 text-white px-3 py-1 rounded-br-lg font-semibold">
       {{ productDiscountPercentage }} OFF
@@ -14,6 +14,7 @@
       </svg>
     </button>
   </div>
+  
   <div class="p-4 space-y-3">
     <h3 class="text-lg font-bold text-gray-900 truncate w-full">{{ productName }}</h3>
     <p class="text-sm text-gray-700">{{ productDescription }}</p>
