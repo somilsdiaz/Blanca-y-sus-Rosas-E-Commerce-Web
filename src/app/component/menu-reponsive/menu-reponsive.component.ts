@@ -1,4 +1,4 @@
-import { Component, Input, Inject } from '@angular/core';
+import { Component, Input, Inject, ChangeDetectorRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
 
 @Component({
@@ -11,17 +11,25 @@ import { DOCUMENT } from '@angular/common';
 export class MenuReponsiveComponent {
   @Input() isMenuVisible: boolean = false;
 
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  constructor(
+    @Inject(DOCUMENT) private document: Document,
+    private cdRef: ChangeDetectorRef
+  ) {}
 
   ngOnChanges(): void {
     if (this.isMenuVisible) {
-      this.document.body.style.overflow = 'hidden'; // Bloquear scroll
+      // Bloquea el scroll al mostrar el menú
+      this.document.body.style.overflow = 'hidden';
     } else {
-      this.document.body.style.overflow = ''; // Restaurar scroll
+      // Restaura el scroll al cerrar el menú
+      this.document.body.style.overflow = '';
     }
   }
 
   closeMenu(): void {
     this.isMenuVisible = false;
+    // Usamos ChangeDetectorRef para asegurarnos de que Angular detecte los cambios
+    this.cdRef.detectChanges();
+    this.document.body.style.overflow = '';  // Restauramos el scroll aquí
   }
 }

@@ -41,4 +41,11 @@ describe('MenuReponsiveComponent', () => {
     component.ngOnChanges();
     expect(mockDocument.body.style.overflow).toBe('');
   });
+
+  it('should restore scroll when closing the menu', () => {
+    component.isMenuVisible = true;
+    component.closeMenu();
+    fixture.detectChanges();
+    expect(mockDocument.body.style.overflow).toBe('');
+  });
 });
