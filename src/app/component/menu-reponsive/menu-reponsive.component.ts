@@ -1,16 +1,27 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-menu-reponsive',
   standalone: true,
   imports: [],
   templateUrl: './menu-reponsive.component.html',
-  styleUrls: ['./menu-reponsive.component.scss'] 
+  styleUrls: ['./menu-reponsive.component.scss']
 })
 export class MenuReponsiveComponent {
-  @Input() isMenuVisible: boolean = false; // Define el input para la visibilidad
-    // Lógica para cerrar el menú
-    closeMenu(): void {
-      this.isMenuVisible = false;
+  @Input() isMenuVisible: boolean = false;
+
+  constructor(@Inject(DOCUMENT) private document: Document) {}
+
+  ngOnChanges(): void {
+    if (this.isMenuVisible) {
+      this.document.body.style.overflow = 'hidden'; // Bloquear scroll
+    } else {
+      this.document.body.style.overflow = ''; // Restaurar scroll
     }
+  }
+
+  closeMenu(): void {
+    this.isMenuVisible = false;
+  }
 }
