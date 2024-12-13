@@ -1,42 +1,100 @@
+/* Dark overlay for the rest of the screen */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker, more opaque overlay */
+  z-index: 1040;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
 .menu-responsive {
   position: fixed;
   top: 0;
-  right: -100%; /* Oculto fuera de la pantalla por defecto */
-  width: 70%;
-  max-width: 300px;
+  right: -100%;
+  width: 80%;
+  max-width: 350px;
   height: 100%;
-  background-color: #fff;
-  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
-  transition: right 0.3s ease-in-out;
-  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95); /* Light, semi-transparent background */
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1050;
+  overflow-y: auto;
+
+  &.active {
+    right: 0;
+  }
 
   nav {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
+    padding: 3rem 2rem;
 
     ul {
       list-style: none;
+      margin: 0;
       padding: 0;
 
       li {
         margin: 1rem 0;
-
+        
         a {
+          display: block;
           text-decoration: none;
           color: #333;
-          font-weight: bold;
-          transition: color 0.3s;
+          font-size: 1.2rem;
+          font-weight: 500;
+          padding: 0.75rem 1rem;
+          border-radius: 8px;
+          transition: all 0.2s ease-in-out;
 
-          &:hover {
-            color: #007bff; /* Cambia el color al pasar el mouse */
+          &:hover, &:focus {
+            background-color: rgba(0, 0, 0, 0.05);
+            transform: translateX(5px);
           }
         }
       }
     }
   }
 
-  &.active {
-    right: 0; /* Se desplaza hacia dentro de la pantalla */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+/* Close button styles */
+.menu-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+
+  &:hover {
+    color: #1e88e5;
   }
 }
