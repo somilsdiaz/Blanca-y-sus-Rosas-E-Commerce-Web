@@ -203,7 +203,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1300px) {
     .background {
         padding: 4em 3em;
     }
@@ -213,6 +213,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     }
 
     .productsSection {
+        grid-template-columns: repeat(3, 1fr);
         width: 65%;
         margin: 2em 0;
 
