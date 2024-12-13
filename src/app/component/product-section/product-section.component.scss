@@ -166,7 +166,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     }
 
     .cards {
-        width: 40%;
+        width: 50%;
     }
 
     .DescriptionCard {
@@ -190,7 +190,7 @@ $shadow-color: rgba(0, 0, 0, 0.1);
     }
 
     .productsSection {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 2em;
         width: 60%;
         margin: 2em 0;
