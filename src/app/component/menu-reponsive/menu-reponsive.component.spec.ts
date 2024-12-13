@@ -1,13 +1,11 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MenuReponsiveComponent } from './menu-reponsive.component';
 import { DOCUMENT } from '@angular/common';
-import { ChangeDetectorRef } from '@angular/core';
 
 describe('MenuReponsiveComponent', () => {
   let component: MenuReponsiveComponent;
   let fixture: ComponentFixture<MenuReponsiveComponent>;
   let mockDocument: Document;
-  let mockChangeDetectorRef: ChangeDetectorRef;
 
   beforeEach(async () => {
     mockDocument = {
@@ -18,17 +16,9 @@ describe('MenuReponsiveComponent', () => {
       }
     } as Document;
 
-    // Mock ChangeDetectorRef
-    mockChangeDetectorRef = {
-      detectChanges: jest.fn()
-    } as unknown as ChangeDetectorRef;
-
     await TestBed.configureTestingModule({
       imports: [MenuReponsiveComponent],
-      providers: [
-        { provide: DOCUMENT, useValue: mockDocument },
-        { provide: ChangeDetectorRef, useValue: mockChangeDetectorRef }
-      ]
+      providers: [{ provide: DOCUMENT, useValue: mockDocument }]
     }).compileComponents();
 
     fixture = TestBed.createComponent(MenuReponsiveComponent);
