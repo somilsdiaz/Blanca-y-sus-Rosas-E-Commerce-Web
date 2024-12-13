@@ -1,0 +1,14 @@
+<div class="menu-overlay" [class.active]="isMenuVisible" (click)="closeMenu()"></div>
+<div class="menu-responsive" [class.active]="isMenuVisible">
+  <button class="menu-close" (click)="closeMenu()">&times;</button>
+  <nav>
+    <ul>
+      <li><a href="#sobre-blanca">Sobre Blanca</a></li>
+      <li><a href="#nosotros">Nosotros</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#caracteristicas">Características</a></li>
+      <li><a href="#productos">Productos</a></li>
+      <li><a href="#recursos">Recursos</a></li>
+    </ul>
+  </nav>
+</div>
