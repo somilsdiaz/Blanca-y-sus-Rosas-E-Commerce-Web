@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';  
 import { MenuReponsiveComponent } from "../menu-reponsive/menu-reponsive.component";
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class HeaderComponent {
   isScrolled = false;
   isMenuVisible: boolean = false; // Propiedad para controlar la visibilidad del menú
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit(): void {}
 
@@ -25,5 +26,9 @@ export class HeaderComponent {
 
   toggleMenu() {
     this.isMenuVisible = !this.isMenuVisible; // Alterna la visibilidad del menú
+  }
+
+  goToCatalogos() {
+    this.router.navigate(['/catalogos']);
   }
 }

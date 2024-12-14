@@ -1,0 +1,10 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.content-container {
+flex: 1; /* El contenido ocupa el espacio restante */
+overflow:visible; /* Scroll si el contenido es muy grande */
+}

@@ -8,12 +8,13 @@ import { SectionProductCardComponent } from "./component/section-product-card/se
 import { MenuReponsiveComponent } from "./component/menu-reponsive/menu-reponsive.component";
 import { CatalogsComponent } from "./component/catalogs/catalogs.component";
 import { HomeComponent } from './pages/home/home.component';
-import { PageCatalogsComponent } from './component/page-catalogs/page-catalogs.component';
+import { PageCatalogsComponent } from './pages/page-catalogs/page-catalogs.component';
+import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FeaturedProductsComponent, ProductCardComponent, ProductSectionComponent, SectionProductCardComponent, MenuReponsiveComponent, CatalogsComponent, PageCatalogsComponent, HomeComponent],
+  imports: [RouterOutlet, HeaderComponent, FeaturedProductsComponent, ProductCardComponent, ProductSectionComponent, SectionProductCardComponent, MenuReponsiveComponent, CatalogsComponent, PageCatalogsComponent, HomeComponent, MainLayoutComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
