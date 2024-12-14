@@ -7,11 +7,13 @@ import { ProductSectionComponent } from "./component/product-section/product-sec
 import { SectionProductCardComponent } from "./component/section-product-card/section-product-card.component";
 import { MenuReponsiveComponent } from "./component/menu-reponsive/menu-reponsive.component";
 import { CatalogsComponent } from "./component/catalogs/catalogs.component";
+import { HomeComponent } from './pages/home/home.component';
+import { PageCatalogsComponent } from './component/page-catalogs/page-catalogs.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FeaturedProductsComponent, ProductCardComponent, ProductSectionComponent, SectionProductCardComponent, MenuReponsiveComponent, CatalogsComponent],
+  imports: [RouterOutlet, HeaderComponent, FeaturedProductsComponent, ProductCardComponent, ProductSectionComponent, SectionProductCardComponent, MenuReponsiveComponent, CatalogsComponent, PageCatalogsComponent, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
