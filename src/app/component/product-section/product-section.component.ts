@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SectionProductCardComponent } from "../section-product-card/section-product-card.component";
-import { CommonModule } from '@angular/common'; // Importar CommonModule
+import { CommonModule } from '@angular/common'; 
 
 @Component({
   selector: 'app-product-section',
