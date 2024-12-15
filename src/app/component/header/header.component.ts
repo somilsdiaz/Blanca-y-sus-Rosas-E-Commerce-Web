@@ -36,4 +36,13 @@ export class HeaderComponent {
       }
     });
   }
+
+  goToHome() {
+    this.router.navigate(['/']).then(() => {
+      const headerSection = document.querySelector('#header');
+      if (headerSection) {
+        headerSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
 }
