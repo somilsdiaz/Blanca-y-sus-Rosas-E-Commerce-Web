@@ -29,6 +29,11 @@ export class HeaderComponent {
   }
 
   goToCatalogos() {
-    this.router.navigate(['/catalogos']);
+    this.router.navigate(['/catalogos']).then(() => {
+      const catalogoSection = document.querySelector('#catalogos');
+      if (catalogoSection) {
+        catalogoSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
   }
 }
