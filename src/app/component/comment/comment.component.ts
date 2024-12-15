@@ -1,6 +1,6 @@
 import { Component, Input  } from '@angular/core';
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importación necesaria
+
 @Component({
   selector: 'app-comment',
   standalone: true,

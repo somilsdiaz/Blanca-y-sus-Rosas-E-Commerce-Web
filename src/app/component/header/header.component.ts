@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
   standalone: true,
   imports: [MatIconModule, MenuReponsiveComponent], 
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'], // Corregido: styleUrls en plural
+  styleUrls: ['./header.component.scss'], 
 })
 export class HeaderComponent {
   isScrolled = false;
