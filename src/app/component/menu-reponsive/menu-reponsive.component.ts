@@ -1,5 +1,6 @@
 import { Component, Input, Inject, ChangeDetectorRef } from '@angular/core';
 import { DOCUMENT } from '@angular/common';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu-reponsive',
@@ -13,7 +14,8 @@ export class MenuReponsiveComponent {
 
   constructor(
     @Inject(DOCUMENT) private document: Document,
-    private cdRef: ChangeDetectorRef
+    private cdRef: ChangeDetectorRef,
+    private router: Router
   ) {}
 
   ngOnChanges(): void {
@@ -31,5 +33,10 @@ export class MenuReponsiveComponent {
     // Usamos ChangeDetectorRef para asegurarnos de que Angular detecte los cambios
     this.cdRef.detectChanges();
     this.document.body.style.overflow = '';  // Restauramos el scroll aquí
+  }
+
+
+  goToCatalogos() {
+    this.router.navigate(['/catalogos']);
   }
 }
