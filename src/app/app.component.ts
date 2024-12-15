@@ -10,11 +10,12 @@ import { CatalogsComponent } from "./component/catalogs/catalogs.component";
 import { HomeComponent } from './pages/home/home.component';
 import { PageCatalogsComponent } from './pages/page-catalogs/page-catalogs.component';
 import { MainLayoutComponent } from './layouts/main-layout/main-layout.component';
+import { CommentComponent } from './component/comment/comment.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HeaderComponent, FeaturedProductsComponent, ProductCardComponent, ProductSectionComponent, SectionProductCardComponent, MenuReponsiveComponent, CatalogsComponent, PageCatalogsComponent, HomeComponent, MainLayoutComponent],
+  imports: [RouterOutlet, HeaderComponent, FeaturedProductsComponent, ProductCardComponent, ProductSectionComponent, SectionProductCardComponent, MenuReponsiveComponent, CatalogsComponent, PageCatalogsComponent, HomeComponent, MainLayoutComponent, CommentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
