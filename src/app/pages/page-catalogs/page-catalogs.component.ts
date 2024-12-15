@@ -10,5 +10,18 @@ import { CommentComponent } from '../../component/comment/comment.component';
   styleUrl: './page-catalogs.component.scss',
 })
 export class PageCatalogsComponent {
-
-}
+  toggleFaq(button: HTMLElement): void {
+    // Buscar el contenedor del contenido oculto (el siguiente hermano del botón)
+    const content = button.nextElementSibling;
+    if (content) {
+      // Alternar la clase 'hidden' en el contenido
+      content.classList.toggle('hidden');
+  
+      // Alternar la rotación del ícono (la flecha)
+      const icon = button.querySelector('svg');
+      if (icon) {
+        icon.classList.toggle('rotate-180');
+      }
+    }
+  }
+}  
